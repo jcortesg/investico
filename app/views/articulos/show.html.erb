@@ -1,3 +1,28 @@
+<section id="contEspecifico">
+    <article id="espLeft">
+        <figure>
+            <img src="/images/cow.jpg" width="333" height="333" alt="estudio vacas">
+        </figure>
+        <p id="valor">Valor</p>
+        <p id="precio">$ <%= @articulo.precio %></p>
+        <aside>
+            <div id="calificacion">
+                <p>Calificacion del comprador</p>
+                <img src="/images/start.png" width="125" height="18" alt="stars">
+            </div>    
+        </aside>
+  
+     </article>
+     <article id="espRight">
+            <h1>
+                <%= @articulo.titulo %>
+            </h1>
+            <p id="description">
+                <%= @articulo.description %>
+            </p>
+            <p id="comprarlo">Donde Comprarlo</p>
+            <div id="shop"></div>
+     </article>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -25,10 +50,6 @@
   <%= @articulo.precio %>
 </p>
 
-<p>
-  <b>Calificacion:</b>
-  <%= @articulo.calificacion %>
-</p>
 
 <p>
   <b>Foto:</b>
@@ -39,4 +60,4 @@
 <%= link_to 'Edit', edit_articulo_path(@articulo) %> |
 <%= link_to 'Back', articulos_path %>
 
-
+</section>
