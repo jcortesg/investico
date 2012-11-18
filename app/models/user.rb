@@ -28,7 +28,10 @@ class User
   field :last_sign_in_at,    :type => Time
   field :current_sign_in_ip, :type => String
   field :last_sign_in_ip,    :type => String
-
+  field :profecion, :type => String
+  field :reputacion, :type => String
+  field :rol, :type => String
+  field :foto, :type => String
   ## Confirmable
   # field :confirmation_token,   :type => String
   # field :confirmed_at,         :type => Time
@@ -46,5 +49,6 @@ class User
   index({ email: 1 }, { unique: true, background: true })
   field :name, :type => String
   validates_presence_of :name
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at
+  attr_accessible :name, :email, :profecion,:reputacion,:rol,:foto,:password, :password_confirmation, :remember_me, :created_at, :updated_at
+  has_many :articulos
 end
