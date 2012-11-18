@@ -31,6 +31,18 @@ a{
 	font-size:20px;
 }
 
+#logo a{
+    width: 130px;
+    height: 131px;
+    background: url(/images/logo_itm.png);
+    display: block;
+	padding:10px;
+	font-size:20px;
+}
+#logo a:hover{
+    background-position: bottom;
+}
+
 header{
 	border-bottom:1px solid #bbb;
 	background:#ddd;
@@ -61,7 +73,7 @@ nav li a:hover{
 }
 
 h1,h2{
-	color:#eb3807;
+	color:#a80000;
 	font-family: Enriqueta, sans-serif;
 }
 
@@ -105,7 +117,7 @@ footer a:hover{
 	margin-bottom:20px;
 }
 
-#strip input{
+#strip input, .new_user input{
 	width:400px;
 	height:48px;
 	border:solid 1px #777;
@@ -116,7 +128,7 @@ footer a:hover{
 	vertical-align: top;
 }
 
-.search {
+.search, input[value="Sign in"] {
 	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	box-shadow:inset 0px 1px 0px 0px #f29c93;
@@ -305,7 +317,7 @@ footer a:hover{
 	margin:25px auto;
 }
 
-#contact label{
+#contact label, .new_user label{
 	font-weight: bold;
 	font-size:18px;
 	display: block;
@@ -354,4 +366,31 @@ a {
 }
 a:hover {
 	text-decoration:underline;
+}
+#new_user {
+    width: 447px;
+    margin: 0 auto;
+}
+#user_remember_me {
+    width: 20px;
+}
+label[for="user_remember_me"] {
+    width: 120px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 18px 0 0 0;
+}
+#main h2{
+    font-size: 38px;
+    margin-bottom: 80px;
+    text-shadow: 2px 2px 1px #CCC;
+    color: #A80000;
+    width: 126px;
+    margin: 0 auto;
+    margin-top: 53px;
+
+}   
+input[name="commit"] {
+    width: 435px;
+    padding-top: 12px;
 }
