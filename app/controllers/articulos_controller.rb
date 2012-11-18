@@ -2,7 +2,7 @@ class ArticulosController < ApplicationController
   # GET /articulos
   # GET /articulos.json
   def index
-    @articulos = Articulo.all
+    @articulos = Articulo.search(params[:q])
 
     respond_to do |format|
       format.html # index.html.erb
