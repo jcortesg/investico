@@ -15,14 +15,27 @@
 	    		<header>
 			<div class="container clearfix">
 				<nav class="clearfix">
-					<ul>
-						<li>
-							<a href="#inicio">Acceso</a>
-						</li>
-						<li>
-							<a href="#inicio">Registro</a>
-						</li>	
-					</ul>
+				<ul>
+
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to 'Salir', destroy_user_session_path, :method=>'delete' %>        
+    </li>
+  <% else %>
+    <li>
+    <%= link_to 'Acceso', new_user_session_path %>  
+    </li>
+  <% end %>
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to 'Editar Cuenta', edit_user_registration_path %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to 'Registro', new_user_registration_path %>
+    </li>
+  <% end %>
+</ul>	
 				</nav>
 				<div id="logo">
 					<a href="/">
@@ -34,15 +47,30 @@
 		</header>
 
     <div id="container" class="container">
-      <header>
-        <%= render 'layouts/navigation' %>
         <%= render 'layouts/messages' %>
-      </header>
       <div id="main" role="main">
         <%= yield %>
 </div>	
       </div>	
 
+<section id="details">
+	<div class="description container clearfix">
+		<div>
+			<h2>Respuestas a un click</h2>
+			<p>Nuestra base de datos ha sido alimentada con miles de estudios listos para ser usados en tu próxima idea.</p>
+		</div>
+
+		<div>
+			<h2>A tu medida</h2>
+			<p>Si tus requerimientos son muy específicos y no encuentras lo que necesitas, buscamos profesionales capaces de responder tus preguntas del mercado.</p>
+		</div>
+
+		<div>
+			<h2>¿Eres investigador?</h2>
+			<p>Si eres un profesional con capacidad de realizar estudios de mercado de alta calidad, estamos interesados en saber de ti. <a href="mailto:">Contáctanos.</a></p>
+		</div>			
+	</div>
+		</section>
 <footer>			
 	<a href="">Nosotros</a> | 
 	<a href="">Términos y condiciones</a> | 
