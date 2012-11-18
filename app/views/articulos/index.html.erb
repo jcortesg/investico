@@ -1,0 +1,99 @@
+<h1>Listing articulos</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Abstract</th>
+    <th>Description</th>
+    <th>Fecha</th>
+    <th>Precio</th>
+    <th>Calificacion</th>
+    <th>Foto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articulos.each do |articulo| %>
+  <tr>
+    <td><%= articulo.titulo %></td>
+    <td><%= articulo.abstract %></td>
+    <td><%= articulo.description %></td>
+    <td><%= articulo.fecha %></td>
+    <td><%= articulo.precio %></td>
+    <td><%= articulo.calificacion %></td>
+    <td><%= articulo.foto %></td>
+    <td><%= link_to 'Show', articulo %></td>
+    <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
+    <td><%= link_to 'Destroy', articulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Articulo', new_articulo_path %>
+
+
+    <section id="results">
+            <div class="container">
+                <h2>5 estudios encontrados</h2>
+                
+                <div class="results">
+                    <ol>
+                        <li class="clearfix">
+                            <div class="position">1</div>
+                            <div class="result-details">
+                                <h3><a href="/research/details">Marketplace para venta de tests.</a></h3>
+                                <span class="author"> <a href="">Michael Jackson</a>, <a href="">Teto Ocampo</a> </span> | <time>26 de febrero de 2012.</time>
+                                <p>Descripción</p>
+                            </div>
+                            <div class="result-meta">
+                                <div class="price">$100.000</div>
+                                <div class="reputation">4.5 <div>Valoración</div></div>
+                            </div>
+                            
+                        </li>
+                        <li class="clearfix">
+                            <div class="position">2</div>
+                            <div class="result-details">
+                                <h3><a href="">Marketplace para venta de tests.</a></h3>
+                                <span class="author"> <a href="">Michael Jackson</a>, <a href="">Teto Ocampo</a> </span> | <time>26 de febrero de 2012.</time>
+                                <p>Los órganos pueden salvar la vida de muchas personas, por lo tanto se intenta calcular el valor de un ojo...</p>
+                            </div>
+                            <div class="result-meta">
+                                <div class="price free">Free!</div>
+                                <div class="reputation">3.5 <div>Valoración</div></div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="position">3</div>
+                            <div class="result-details">
+                                <h3><a href="">Marketplace para venta de tests.</a></h3>
+                                <span class="author"> <a href="">Michael Jackson</a>, <a href="">Teto Ocampo</a> </span> | <time>26 de febrero de 2012.</time>
+                                <p>Los órganos pueden salvar la vida de muchas personas, por lo tanto se intenta calcular el valor de un ojo...</p>
+                            </div>
+                            <div class="result-meta">
+                                <div class="price free">Free!</div>
+                                <div class="reputation">2.5 <div>Valoración</div></div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="position">4</div>
+                            <div class="result-details">
+                                <h3><a href="">Marketplace para venta de tests.</a></h3>
+                                <span class="author"> <a href="">Michael Jackson</a>, <a href="">Teto Ocampo</a> </span> | <time>26 de febrero de 2012.</time>
+                                <p>Los órganos pueden salvar la vida de muchas personas, por lo tanto se intenta calcular el valor de un ojo...</p>
+                            </div>
+                            <div class="result-meta">
+                                <div class="price free">$1'500.000</div>
+                                <div class="reputation">5.0 <div>Valoración</span></div>
+                            </div>
+                        </li>
+                    </ol>   
+                </div>
+                    <h2><a href="/research/contact">¿No encuentras lo que buscas? Contactanos</a></h2>      
+            </div>          
+
+        </section>
+
