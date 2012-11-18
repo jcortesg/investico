@@ -128,7 +128,7 @@ footer a:hover{
 	vertical-align: top;
 }
 
-.search, input[value="Sign in"] {
+.search, input[name="commit"] {
 	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	box-shadow:inset 0px 1px 0px 0px #f29c93;
@@ -373,6 +373,7 @@ a:hover {
 }
 #user_remember_me {
     width: 20px;
+    margin: 20px 0 0 0;
 }
 label[for="user_remember_me"] {
     width: 120px;
@@ -385,7 +386,7 @@ label[for="user_remember_me"] {
     margin-bottom: 80px;
     text-shadow: 2px 2px 1px #CCC;
     color: #A80000;
-    width: 126px;
+    width: 136px;
     margin: 0 auto;
     margin-top: 53px;
 
@@ -393,4 +394,5 @@ label[for="user_remember_me"] {
 input[name="commit"] {
     width: 435px;
     padding-top: 12px;
+    margin: 25px 0;
 }
