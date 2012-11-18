@@ -1,0 +1,2 @@
+module Research::ProfileHelper
+end

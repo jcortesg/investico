@@ -1,0 +1,125 @@
+// Place all the styles related to the research controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$hh : 269px;  //header height
+$fh : 362px; //footer height
+$box : 960px; //site width
+$cyan : #48A6B2;
+$ocre  : #FFBA31;
+$green : #00cd88;
+$gray : #454545;
+$grayl : #787878;
+$blue : #5d89a8;
+$blued : #384f5f;
+
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Enriqueta:400,700);
+
+@mixin tshadow($color : $gray) {
+	text-shadow: 2px 1px 0px $color;
+        filter: dropshadow(color=$color, offx=2, offy=1);
+}
+@mixin center{
+	width:960px;
+	margin:0px auto;
+}
+@mixin bshadow($color : transparentize($gray,0.5) , $hl : 3px, $vl :3px ){
+	-webkit-box-shadow: $hl $vl 0px 0px $color ;
+	box-shadow: $hl $vl 0px 0px $color ;
+}
+@mixin bg {
+	background: rgb(238,238,238); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+	font-family: 'Quattrocento Sans', sans-serif;
+	background:#E8E8E8;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Enriqueta', serif;
+}
+.research {
+	@include center;
+	background:rgba(255,255,255,.08);	
+	margin-top:25px;
+	padding-bottom:20px;
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .3);;
+	.meta{
+		@include bg;
+		padding-bottom:25px;
+	}
+	h2{
+		background:#FDD355;
+		padding:10px;
+		font-weight:700;	
+		small {
+			color:$grayl;
+		}
+		font-size:19px;
+		color:white;
+		@include tshadow(transparentize($grayl,0.8));
+	}
+	h3{
+		background:$blued;
+		color:white;
+		padding:3px 8px;
+		clear:both;
+		border-left:2px solid white;
+		small {
+			color: lighten($grayl,30%);
+		}
+	}
+	p{
+		margin:10px 20px;
+	}
+	img.bn {
+		float: right;
+		width: 350px;
+		width: 150px;
+		margin: -34px 19px 0px 10px;
+		box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .3);;
+	}
+	.col {
+		width:50%;
+		margin:5px 0px;
+		padding:0px;
+		float:left;
+		position:relative;
+		ul{
+			list-style-type:none;
+			li{
+				text-transform:capitalize;
+				a{
+					color:black;
+					text-decoration:none;
+					&:hover {
+						text-decoration:underline;
+					}
+				}
+			}
+		}
+		&.profile {
+			a {
+				color:white;
+				text-decoration:none;
+				&:hover{
+					text-decoration:underline;
+				}
+			}
+			img{
+				position:absolute;
+				right:12px;
+				height:100px;
+			}
+			p{
+				padding-right:100px;
+			}
+		}
+	}
+}
