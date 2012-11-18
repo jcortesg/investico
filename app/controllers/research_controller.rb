@@ -10,4 +10,5 @@ class ResearchController < ApplicationController
 
   def contact
   end
+
 end

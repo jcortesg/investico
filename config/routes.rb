@@ -1,4 +1,6 @@
 Rails3MongoidDevise::Application.routes.draw do
+  get "us/index"
+
   get "research/profile"
 
   get "research/details"

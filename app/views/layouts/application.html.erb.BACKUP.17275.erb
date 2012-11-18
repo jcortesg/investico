@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	    	<title><%= content_for?(:title) ? yield(:title) : "Rails3 Mongoid Devise" %></title>
@@ -46,6 +47,18 @@
 			</div>
 		</header>
 
+=======
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "investico" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails3 Mongoid Devise" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+>>>>>>> 9d5aea36b886d33c2de53d0824d82a4118284fa5
     <div id="container" class="container">
         <%= render 'layouts/messages' %>
       <div id="main" role="main">
@@ -67,14 +80,14 @@
 
 		<div>
 			<h2>¿Eres investigador?</h2>
-			<p>Si eres un profesional con capacidad de realizar estudios de mercado de alta calidad, estamos interesados en saber de ti. <a href="/users/sign_up">Contáctanos.</a></p>
+			<p>Si eres un profesional con capacidad de realizar estudios de mercado de alta calidad, estamos interesados en saber de ti. <a href="mailto:">Contáctanos.</a></p>
 		</div>			
 	</div>
 		</section>
 <footer>			
-	<a href="/us/index">Nosotros</a> | 
-	<a href="#">Términos y condiciones</a> | 
-	<a href="http://investigarmercado.blogspot.com/">Blog</a>	
+	<a href="">Nosotros</a> | 
+	<a href="">Términos y condiciones</a> | 
+	<a href="">Contacto</a>	
 </footer>
 </body>
 </html>
