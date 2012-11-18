@@ -1,3 +1,11 @@
+production:
+  sessions:
+    default:
+      uri: mongodb://root:investico@alex.mongohq.com:10079/app9300741
+      options:
+        skip_version_check: true
+        safe: true
+
 development:
   # Configure available database sessions. (required)
   sessions:
@@ -79,5 +87,4 @@ test:
         max_retries: 1
         retry_interval: 0
 
-production:
-    uri: <%= ENV['MONGOHQ_URL'] %>
+
