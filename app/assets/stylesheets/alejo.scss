@@ -440,4 +440,27 @@ input[name="commit"] {
     display: inline-block;
     vertical-align: top;
     background: #fff;
+    margin-left: -4px;
+    position: relative;
+}
+#espRight h1{
+    font-size: 24px;
+    font-weight: normal;
+    padding: 30px 20px;
+}
+#espRight #description{
+    font-size: 17px;
+    font-weight: normal;
+    padding: 0px 20px;
+}
+
+#espRight #comprarlo {
+    position: absolute;
+    bottom: 100px;
+    padding: 0 0 0 20px;
+    font-size: 20px;
+}
+#espRight #shop {
+    position: absolute;
+    bottom: 0;
 }
