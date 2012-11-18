@@ -1,7 +1,8 @@
 production:
   sessions:
     default:
-      uri: mongodb://root:investico@alex.mongohq.com:10079/app9300741
+      uri: mongodb://root:investico@alex.mongohq.com:10079
+      database: app9300741
       options:
         skip_version_check: true
         safe: true
